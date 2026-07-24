@@ -288,25 +288,25 @@ Validações realizadas:
 
 ## Criação de produto
 
-![Criação de produto](images/criar-produto.png)
+![Criação de produto](produtosapi/images/criar-produto.png)
 
 ---
 
 ## Estrutura da API
 
-![Estrutura da API](images/estrutura-api.png)
+![Estrutura da API](produtosapi/images/estrutura-api.png)
 
 ---
 
 ## Console H2
 
-![Console H2](images/console-h2.png)
+![Console H2](produtosapi/images/console-h2.png)
 
 ---
 
 ## Pesquisa de produtos
 
-![Busca por nome](images/busca-mouse.png)
+![Busca por nome](produtosapi/images/busca-mouse.png)
 
 ---
 

@@ -10,6 +10,33 @@ Os endpoints foram testados utilizando o **Postman**.
 
 ---
 
+# ▶️ Como executar
+
+Pré-requisito: **JDK 21**.
+
+```bash
+cd produtosapi
+./mvnw spring-boot:run        # no Windows: mvnw.cmd spring-boot:run
+```
+
+A API sobe em `http://localhost:8080`. O banco H2 fica em memória: os dados são perdidos quando a aplicação para.
+
+Exemplos de uso:
+
+```bash
+# criar
+curl -X POST http://localhost:8080/produtos \
+  -H "Content-Type: application/json" \
+  -d '{"nome":"Mouse","descricao":"Mouse sem fio","preco":59.90}'
+
+# pesquisar pelo nome
+curl "http://localhost:8080/produtos?nome=Mouse"
+```
+
+Console do H2 (opcional): `http://localhost:8080/h2-console`, com JDBC URL `jdbc:h2:mem:produtos`, usuário `sa` e senha `123` (credencial local de um banco em memória, só para desenvolvimento).
+
+---
+
 # 🚀 Tecnologias utilizadas
 
 ## Java 21
@@ -313,6 +340,7 @@ Validações realizadas:
 # 🔮 Melhorias futuras
 
 - Implementar validações com Bean Validation
+- Retornar JSON e códigos HTTP adequados (por exemplo, `201 Created` no POST) em vez de texto simples
 - Criar tratamento global de exceções
 - Adicionar testes automatizados
 - Implementar Swagger/OpenAPI
